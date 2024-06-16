@@ -1,1 +1,1 @@
-export const server = process.env.BACKEND_URL;
+export const server = import.meta.env.VITE_BACKEND_URL;
