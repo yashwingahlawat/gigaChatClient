@@ -47,7 +47,7 @@ function Login() {
 
     try {
       const { data } = await axios.post(
-        `${server}api/v1/user/login`,
+        `${server}/api/v1/user/login`,
         {
           username: username.value,
           password: password.value,
@@ -84,7 +84,7 @@ function Login() {
     };
     try {
       const { data } = await axios.post(
-        `${server}api/v1/user/new`,
+        `${server}/api/v1/user/new`,
         formData,
         config
       );
