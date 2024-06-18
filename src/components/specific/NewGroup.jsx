@@ -126,6 +126,7 @@ const NewGroup = ({ isNewGroup }) => {
           direction={"row"}
         >
           <Button
+            onClick={handleClose}
             sx={{
               color: "rgb(255,255,255,0.6)",
             }}
