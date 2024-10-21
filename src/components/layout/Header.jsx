@@ -81,7 +81,7 @@ const Header = () => {
       <Box sx={{ flexGrow: 1, height: "4rem" }}>
         <AppBar
           position="sticky"
-          sx={{ background: "linear-gradient(to right, #4e4cb8, #352f75)" }}
+          sx={{ background: "linear-gradient(to right, #ea7070, #352f75)" }}
         >
           <Toolbar>
             <div className="flex gap-3 items-center">
@@ -105,7 +105,7 @@ const Header = () => {
                 variant="h6"
                 sx={{ display: { xs: "none", sm: "block" } }}
               >
-                GigaChat
+                Chatify
               </Typography>
             </div>
             <Box sx={{ flexGrow: 1 }} />

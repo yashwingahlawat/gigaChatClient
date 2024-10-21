@@ -44,12 +44,12 @@ const Notifications = ({ isNotifications }) => {
             width: "2px",
           },
           "&::-webkit-scrollbar-thumb": {
-            backgroundColor: "#4e4cb8",
+            backgroundColor: "#ea7070",
           },
           "&::-webkit-scrollbar-track": {
             backgroundColor: "#f0f0f0",
           },
-          background: "linear-gradient(to right, #4e4cb8, #2d295a)",
+          background: "linear-gradient(to right, #ea7070, #2d295a)",
         }}
         padding={{ xs: ".5rem", sm: "1rem" }}
         width={{ xs: "100%", sm: "25rem" }}

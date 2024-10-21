@@ -135,7 +135,7 @@ const AppLayout = () => (WrappedComponent) => {
                 width: "0px",
               },
               "&::-webkit-scrollbar-thumb": {
-                backgroundColor: "#4e4cb8",
+                backgroundColor: "#ea7070",
               },
               "&::-webkit-scrollbar-track": {
                 backgroundColor: "#f0f0f0",
@@ -143,7 +143,7 @@ const AppLayout = () => (WrappedComponent) => {
               display: { xs: "none", sm: "block" },
               padding: 1,
               bgcolor: "transparent",
-              border: "2px solid #4e4cb8",
+              border: "2px solid #ea7070",
             }}
           >
             {isLoading ? (
@@ -186,7 +186,7 @@ const AppLayout = () => (WrappedComponent) => {
                 width: "0px",
               },
               "&::-webkit-scrollbar-thumb": {
-                backgroundColor: "#4e4cb8",
+                backgroundColor: "#ea7070",
               },
               "&::-webkit-scrollbar-track": {
                 backgroundColor: "#f0f0f0",
@@ -195,7 +195,7 @@ const AppLayout = () => (WrappedComponent) => {
               display: { xs: "none", md: "block" },
               padding: 2,
               bgcolor: "transparent",
-              border: "2px solid #4e4cb8",
+              border: "2px solid #ea7070",
             }}
             md={4}
             lg={3}

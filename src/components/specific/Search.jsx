@@ -51,14 +51,14 @@ const Search = ({ isSearch }) => {
     <Dialog open={isSearch} onClose={searchCloseHandler}>
       <Stack
         sx={{
-          background: "linear-gradient(to right, #4e4cb8, #2d295a)",
+          background: "linear-gradient(to right, #ea7070, #2d295a)",
           overflow: "auto",
           height: "97%",
           "&::-webkit-scrollbar": {
             width: "2px",
           },
           "&::-webkit-scrollbar-thumb": {
-            backgroundColor: "#4e4cb8",
+            backgroundColor: "#ea7070",
           },
           "&::-webkit-scrollbar-track": {
             backgroundColor: "#f0f0f0",
@@ -68,7 +68,7 @@ const Search = ({ isSearch }) => {
         width={{ xs: "100%", sm: "25rem" }}
       >
         <DialogTitle variant="h5" className="text-white" textAlign={"center"}>
-          Find GigaChatters
+          Find Chatifyters
         </DialogTitle>
         <WhiteOutlineTextField
           size="small"

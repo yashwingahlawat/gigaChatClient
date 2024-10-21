@@ -104,230 +104,234 @@ function Login() {
   };
 
   return (
-    <Container
-      className={`gradient ${!isLogin ? "h-fit" : "h-[100vh]"}`}
-      component="main"
-      sx={{
-        padding: "none",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100vw",
-      }}
-    >
-      <Paper
-        className="w-[90%] lg:max-w-[45%]"
-        elevation={4}
+    <div style={{
+      backgroundImage: 'linear-gradient(rgba(200,200,200,0.5),rgba(120,110,220,0.5))'
+    }}>
+      <Container
+        className={`${!isLogin ? "h-fit" : "h-[100vh]"}`}
+        component="main"
         sx={{
-          padding: 4,
+          padding: "none",
           display: "flex",
-          flexDirection: "column",
+          justifyContent: "center",
           alignItems: "center",
+          width: "100vw",
         }}
       >
-        {isLogin ? (
-          <>
-            <div className="flex flex-col gap-3 items-center">
-              <img
-                className="h-[5rem] w-[5rem] rounded-[100%]"
-                src={logo}
-                alt=""
-              />
-              <Typography sx={{ fontWeight: 700 }} variant="h5">
-                LOGIN
-              </Typography>
-            </div>
-            <form onSubmit={handleLogin} className=" w-full mt-[1rem]">
-              <TextField
-                label="Username"
-                margin="normal"
-                required
-                fullWidth
-                type="text"
-                name="username"
-                value={username.value}
-                onChange={username.changeHandler}
-              />
-              {username.error && (
-                <Typography color="error" variant="caption">
-                  {username.error}
+        <Paper
+          className="w-[90%] lg:max-w-[45%]"
+          elevation={4}
+          sx={{
+            padding: 4,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          {isLogin ? (
+            <>
+              <div className="flex flex-col gap-3 items-center">
+                <img
+                  className="h-[5rem] w-[5rem] rounded-[100%]"
+                  src={logo}
+                  alt=""
+                />
+                <Typography sx={{ fontWeight: 700 }} variant="h5">
+                  LOGIN
                 </Typography>
-              )}
-              <TextField
-                label="Password"
-                margin="normal"
-                required
-                fullWidth
-                type="password"
-                name="password"
-                value={password.value}
-                onChange={password.changeHandler}
-              />
-              <Button
-                fullWidth
-                sx={{ mt: "1rem" }}
-                variant="contained"
-                color="primary"
-                type="submit"
-                disabled={isLoading}
-              >
-                Login
-              </Button>
-              <div className="flex gap-3">
-                <Typography variant="body2" sx={{ mt: "1rem", p: 0 }}>
-                  New to GigaChat?
-                </Typography>
-
-                <Button
-                  sx={{ mt: "1rem", p: 0 }}
-                  onClick={toggleLogin}
-                  variant="text"
-                  disabled={isLoading}
-                >
-                  Register
-                </Button>
               </div>
-            </form>
-          </>
-        ) : (
-          <>
-            <div className="flex flex-col gap-3 items-center">
-              <img
-                className="h-[5rem] w-[5rem] rounded-[100%]"
-                src={logo}
-                alt=""
-              />
-              <Typography sx={{ fontWeight: 700 }} variant="h5">
-                REGISTER
-              </Typography>
-            </div>
-            <form onSubmit={handleRegister} className=" w-full mt-[1rem]">
-              <Stack position="relative" width="10rem" margin="auto">
-                <Avatar
-                  src={avatar.preview}
-                  sx={{
-                    width: "10rem",
-                    height: "10rem",
-                    objectFit: "contain",
-                  }}
+              <form onSubmit={handleLogin} className=" w-full mt-[1rem]">
+                <TextField
+                  label="Username"
+                  margin="normal"
+                  required
+                  fullWidth
+                  type="text"
+                  name="username"
+                  value={username.value}
+                  onChange={username.changeHandler}
                 />
-                {/* Regular input for file selection */}
-                <VisuallyHiddenInput
-                  type="file"
-                  id="fileInput"
-                  onChange={avatar.changeHandler}
+                {username.error && (
+                  <Typography color="error" variant="caption">
+                    {username.error}
+                  </Typography>
+                )}
+                <TextField
+                  label="Password"
+                  margin="normal"
+                  required
+                  fullWidth
+                  type="password"
+                  name="password"
+                  value={password.value}
+                  onChange={password.changeHandler}
                 />
-                {/* IconButton to trigger file selection */}
-                <label htmlFor="fileInput">
-                  <IconButton
-                    sx={{
-                      position: "absolute",
-                      right: 0,
-                      bottom: 0,
-                      color: "white",
-                      bgcolor: "rgb(0,0,0,0.5)",
-                      ":hover": { bgcolor: "rgb(0,0,0,0.8)" },
-                    }}
-                    component="span"
-                  >
-                    <CameraAltIcon />
-                  </IconButton>
-                </label>
-              </Stack>
-              {avatar.error && (
-                <Typography
-                  sx={{
-                    m: "1rem auto",
-                    width: "fit-content",
-                    display: "block",
-                  }}
-                  color="error"
-                  variant="caption"
-                >
-                  {avatar.error}
-                </Typography>
-              )}
-
-              <TextField
-                label="Fullname"
-                margin="normal"
-                required
-                fullWidth
-                type="text"
-                name="name"
-                value={fullName.value}
-                onChange={fullName.changeHandler}
-              />
-              {fullName.error && (
-                <Typography color="error" variant="caption">
-                  {fullName.error}
-                </Typography>
-              )}
-              <TextField
-                label="Bio"
-                margin="normal"
-                required
-                fullWidth
-                type="text"
-                name="bio"
-                value={bio.value}
-                onChange={bio.changeHandler}
-              />
-              <TextField
-                label="Username"
-                margin="normal"
-                required
-                fullWidth
-                type="text"
-                name="username"
-                value={username.value}
-                onChange={username.changeHandler}
-              />
-
-              {username.error && (
-                <Typography color="error" variant="caption">
-                  {username.error}
-                </Typography>
-              )}
-              <TextField
-                label="Password"
-                margin="normal"
-                required
-                fullWidth
-                type="password"
-                name="password"
-                value={password.value}
-                onChange={password.changeHandler}
-              />
-              <Button
-                fullWidth
-                sx={{ mt: "1rem" }}
-                variant="contained"
-                color="primary"
-                type="submit"
-                disabled={isLoading}
-              >
-                Register
-              </Button>
-              <div className="flex gap-3">
-                <Typography variant="body2" sx={{ mt: "1rem", p: 0 }}>
-                  Already a GigaChat Member?
-                </Typography>
-
                 <Button
-                  sx={{ mt: "1rem", p: 0 }}
-                  onClick={toggleLogin}
-                  variant="text"
+                  fullWidth
+                  sx={{ mt: "1rem" }}
+                  variant="contained"
+                  color="primary"
+                  type="submit"
                   disabled={isLoading}
                 >
                   Login
                 </Button>
+                <div className="flex gap-3">
+                  <Typography variant="body2" sx={{ mt: "1rem", p: 0 }}>
+                    New to Chatify?
+                  </Typography>
+
+                  <Button
+                    sx={{ mt: "1rem", p: 0 }}
+                    onClick={toggleLogin}
+                    variant="text"
+                    disabled={isLoading}
+                  >
+                    Register
+                  </Button>
+                </div>
+              </form>
+            </>
+          ) : (
+            <>
+              <div className="flex flex-col gap-3 items-center">
+                <img
+                  className="h-[5rem] w-[5rem] rounded-[100%]"
+                  src={logo}
+                  alt=""
+                />
+                <Typography sx={{ fontWeight: 700 }} variant="h5">
+                  REGISTER
+                </Typography>
               </div>
-            </form>
-          </>
-        )}
-      </Paper>
-    </Container>
+              <form onSubmit={handleRegister} className=" w-full mt-[1rem]">
+                <Stack position="relative" width="10rem" margin="auto">
+                  <Avatar
+                    src={avatar.preview}
+                    sx={{
+                      width: "10rem",
+                      height: "10rem",
+                      objectFit: "contain",
+                    }}
+                  />
+                  {/* Regular input for file selection */}
+                  <VisuallyHiddenInput
+                    type="file"
+                    id="fileInput"
+                    onChange={avatar.changeHandler}
+                  />
+                  {/* IconButton to trigger file selection */}
+                  <label htmlFor="fileInput">
+                    <IconButton
+                      sx={{
+                        position: "absolute",
+                        right: 0,
+                        bottom: 0,
+                        color: "white",
+                        bgcolor: "rgb(0,0,0,0.5)",
+                        ":hover": { bgcolor: "rgb(0,0,0,0.8)" },
+                      }}
+                      component="span"
+                    >
+                      <CameraAltIcon />
+                    </IconButton>
+                  </label>
+                </Stack>
+                {avatar.error && (
+                  <Typography
+                    sx={{
+                      m: "1rem auto",
+                      width: "fit-content",
+                      display: "block",
+                    }}
+                    color="error"
+                    variant="caption"
+                  >
+                    {avatar.error}
+                  </Typography>
+                )}
+
+                <TextField
+                  label="Fullname"
+                  margin="normal"
+                  required
+                  fullWidth
+                  type="text"
+                  name="name"
+                  value={fullName.value}
+                  onChange={fullName.changeHandler}
+                />
+                {fullName.error && (
+                  <Typography color="error" variant="caption">
+                    {fullName.error}
+                  </Typography>
+                )}
+                <TextField
+                  label="Bio"
+                  margin="normal"
+                  required
+                  fullWidth
+                  type="text"
+                  name="bio"
+                  value={bio.value}
+                  onChange={bio.changeHandler}
+                />
+                <TextField
+                  label="Username"
+                  margin="normal"
+                  required
+                  fullWidth
+                  type="text"
+                  name="username"
+                  value={username.value}
+                  onChange={username.changeHandler}
+                />
+
+                {username.error && (
+                  <Typography color="error" variant="caption">
+                    {username.error}
+                  </Typography>
+                )}
+                <TextField
+                  label="Password"
+                  margin="normal"
+                  required
+                  fullWidth
+                  type="password"
+                  name="password"
+                  value={password.value}
+                  onChange={password.changeHandler}
+                />
+                <Button
+                  fullWidth
+                  sx={{ mt: "1rem" }}
+                  variant="contained"
+                  color="primary"
+                  type="submit"
+                  disabled={isLoading}
+                >
+                  Register
+                </Button>
+                <div className="flex gap-3">
+                  <Typography variant="body2" sx={{ mt: "1rem", p: 0 }}>
+                    Already a Chatify Member?
+                  </Typography>
+
+                  <Button
+                    sx={{ mt: "1rem", p: 0 }}
+                    onClick={toggleLogin}
+                    variant="text"
+                    disabled={isLoading}
+                  >
+                    Login
+                  </Button>
+                </div>
+              </form>
+            </>
+          )}
+        </Paper>
+      </Container>
+    </div>
   );
 }
 

@@ -182,7 +182,7 @@ function Chat({ chatId, user }) {
             borderRadius: "100%",
           },
           "&::-webkit-scrollbar-thumb": {
-            backgroundColor: "#4e4cb8",
+            backgroundColor: "#ea7070",
             borderRadius: "5px",
           },
           "&::-webkit-scrollbar-track": {
@@ -238,7 +238,7 @@ function Chat({ chatId, user }) {
               },
             }}
           >
-            <SendIcon className="text-[#4e4cb8]" />
+            <SendIcon className="text-[#ea7070]" />
           </IconButton>
         </Stack>
       </form>

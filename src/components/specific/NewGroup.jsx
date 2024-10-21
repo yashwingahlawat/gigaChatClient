@@ -42,7 +42,7 @@ const NewGroup = ({ isNewGroup }) => {
         : [...prev, _id]
     );
   };
-  useEffect(() => {}, [selectedMembers]);
+  useEffect(() => { }, [selectedMembers]);
 
   const submitHandler = () => {
     if (!groupName.value) return toast.error("Group name is required");
@@ -63,14 +63,14 @@ const NewGroup = ({ isNewGroup }) => {
     <Dialog open={isNewGroup} onClose={handleClose}>
       <Stack
         sx={{
-          background: "linear-gradient(to right, #4e4cb8, #2d295a)",
+          background: "linear-gradient(to right, #ea7070, #2d295a)",
           overflow: "auto",
 
           "&::-webkit-scrollbar": {
             width: "2px",
           },
           "&::-webkit-scrollbar-thumb": {
-            backgroundColor: "#4e4cb8",
+            backgroundColor: "#ea7070",
           },
           "&::-webkit-scrollbar-track": {
             backgroundColor: "#f0f0f0",

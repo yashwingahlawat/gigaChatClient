@@ -38,7 +38,7 @@ const AddMember = ({ chatId }) => {
   };
   const dispatch = useDispatch();
 
-  useEffect(() => {}, [selectedMembers]);
+  useEffect(() => { }, [selectedMembers]);
 
   const closeHandler = () => {
     dispatch(setIsAddMember(false));
@@ -71,7 +71,7 @@ const AddMember = ({ chatId }) => {
               borderRadius: "10px",
             },
             "&::-webkit-scrollbar-thumb": {
-              backgroundColor: "#4e4cb8",
+              backgroundColor: "#ea7070",
             },
             "&::-webkit-scrollbar-track": {
               backgroundColor: "#f0f0f0",
@@ -108,7 +108,7 @@ const AddMember = ({ chatId }) => {
           <Button
             onClick={closeHandler}
             sx={{
-              color: "#4e4cb8",
+              color: "#ea7070",
             }}
           >
             Close

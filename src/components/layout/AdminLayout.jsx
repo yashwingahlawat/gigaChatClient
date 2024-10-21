@@ -123,7 +123,7 @@ const AdminLayout = ({ children }) => {
             width: "2px",
           },
           "&::-webkit-scrollbar-thumb": {
-            backgroundColor: "#4e4cb8",
+            backgroundColor: "#ea7070",
           },
           "&::-webkit-scrollbar-track": {
             backgroundColor: "#f0f0f0",
@@ -190,7 +190,7 @@ const Sidebar = ({ w = "100%", logoutHandler }) => {
           width: "0px",
         },
         "&::-webkit-scrollbar-thumb": {
-          backgroundColor: "#4e4cb8",
+          backgroundColor: "#ea7070",
         },
         "&::-webkit-scrollbar-track": {
           backgroundColor: "#f0f0f0",
@@ -211,7 +211,7 @@ const Sidebar = ({ w = "100%", logoutHandler }) => {
         variant="h4"
       >
         <Avatar src={logo} />
-        GigaChat
+        Chatify
       </Typography>
 
       <Stack spacing={"1rem"}>

@@ -289,7 +289,7 @@ function Groups() {
       <Grid
         component={Paper}
         elevation={3}
-        className=" border-2 border-[#4e4cb8]"
+        className=" border-2 border-[#ea7070]"
         item
         sx={{
           bgcolor: "transparent",
@@ -362,7 +362,7 @@ function Groups() {
                   display: "none",
                 },
                 scrollbarWidth: "none",
-                background: "linear-gradient(to right, #4e4cb8, #2d295a)",
+                background: "linear-gradient(to right, #ea7070, #2d295a)",
               }}
               spacing={"1rem"}
             >

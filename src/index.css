@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .gradient {
-  background: linear-gradient(135deg, #444444, #222222);
+  background: linear-gradient(135deg, #414141, #000000);
 }
 
 .blueGradient {
-  background: linear-gradient(to right, #4e4cb8, #2d295a);
+  background: linear-gradient(to right, #ea7070, #2d295a);
 }
 
 .senderMsgGradient {

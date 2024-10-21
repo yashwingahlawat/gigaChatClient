@@ -265,7 +265,7 @@ export const sampleMessage = [
   },
 ];
 
-export const themeBlue = "#4e4cb8";
+export const themeBlue = "#ea7070";
 export const black = "#333333";
 
 export const dashboardData = {

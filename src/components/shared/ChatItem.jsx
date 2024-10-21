@@ -32,9 +32,8 @@ const ChatItem = ({
         transition={{
           delay: index * 0.13,
         }}
-        className={`flex shadow-lg   justify-start pb-2 items-center gap-[1.6rem] px-0 py-2 relative ${
-          sameSender ? "blueGradient" : "black"
-        }
+        className={`flex shadow-lg   justify-start pb-2 items-center gap-[1.6rem] px-0 py-2 relative ${sameSender ? "blueGradient" : "black"
+          }
         ${sameSender ? "text-white" : "text-black"}
         } border-b border-[#f0f0f0]`}
       >

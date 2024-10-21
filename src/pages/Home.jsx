@@ -23,7 +23,7 @@ function Home() {
         className="text-white  p-1  font-bold border 2shadow-xl "
         variant="h4"
       >
-        Welcome GigaChatter
+        Welcome Chatifyter
       </Typography>
       <img
         src={logo}

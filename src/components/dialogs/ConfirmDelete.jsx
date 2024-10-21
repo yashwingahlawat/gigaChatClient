@@ -22,7 +22,7 @@ const ConfirmDelete = ({ open, deleteHandler, handleClose }) => {
           <Button
             onClick={deleteHandler}
             sx={{
-              color: "#4e4cb8",
+              color: "#ea7070",
             }}
           >
             Yes
